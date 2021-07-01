@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = '{"employee":[{"firstName": "John","lastName": "Stroke","Salary": 5000 ,"PermanentStaff": true}]'+
+            ',"department":[{"departmentid": 3,"departmentname": "Payroll"}]'+
+            ',"Skills":[{"id": 1,"value": "HTML"},{"id": 2, "value":"CSS" },{"id":3, "value":"JavaScript"}]}';
+
+
+const obj = JSON.parse(text);
+
+
+console.log(obj);
+document.getElementById("demo").innerHTML =
+obj.employee[0].firstName + " " + obj.employee[0].lastName;
+</script>
+
+</body>
+</html>
